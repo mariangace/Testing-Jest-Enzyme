@@ -10,9 +10,17 @@ test('renders without error', () => {
   expect(appComponent.length).toBe(1);
 });
 
-test('renders increment button', () => {});
+test('renders increment button', () => {
+  const wrapper = shallow(<App />);
+  const button = wrapper.find("[data-test='increment-button']");
+  expect(button.length).toBe(1);
+});
 
-test('renders counter display', () => {});
+test('renders counter display', () => {
+  const wrapper = shallow(<App />);
+  const counter = wrapper.find("[data-test='counter-display']");
+  expect(counter.length).toBe(1);
+});
 
 test('counter display start at 0', () => {});
 
